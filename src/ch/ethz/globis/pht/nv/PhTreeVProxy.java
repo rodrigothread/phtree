@@ -29,8 +29,8 @@ public class PhTreeVProxy extends PhTreeNV {
 	
 	private final PhTree<Object> tree;
 	
-	public PhTreeVProxy(int dim, int depth) {
-		tree = PhTree.create(dim, depth);
+	public PhTreeVProxy(int dim) {
+		tree = PhTree.create(dim);
 	}
 	
 	public PhTreeVProxy(PhTree<Object> tree) {

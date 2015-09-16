@@ -35,14 +35,26 @@ public class PhTreeF<T> {
 	 * Create a new tree with the specified number of dimensions.
 	 * 
 	 * @param dim number of dimensions
+	 * @return PhTree
 	 */
-    public static <T> PhTreeF<T> create(int dim) {
-    	return new PhTreeF<T>(dim);
-    }
+	public static <T> PhTreeF<T> create(int dim) {
+		return new PhTreeF<T>(dim, new EmptyPP());
+	}
 
-	private PhTreeF(int dim) {
-		pht = PhTree.create(dim, Double.SIZE);
-		pre = new EmptyPP();
+	/**
+	 * Create a new tree with the specified number of dimensions.
+	 * 
+	 * @param dim number of dimensions
+	 * @param pre The preprocessor top be used.
+	 * @return PhTree
+	 */
+	public static <T> PhTreeF<T> create(int dim, PreProcessorPoint pre) {
+		return new PhTreeF<T>(dim, pre);
+	}
+
+	private PhTreeF(int dim, PreProcessorPoint pre) {
+		pht = PhTree.create(dim);
+		this.pre = pre;
 	}
 	
 	public PhTreeF(PhTree<T> tree) {
@@ -64,7 +76,7 @@ public class PhTreeF<T> {
 		long[] lKey = new long[key.length];
 		pre.pre(key, lKey);
     	return pht.put(lKey, value);
-    };
+    }
 
     public boolean contains(double ... key) {
 		long[] lKey = new long[key.length];

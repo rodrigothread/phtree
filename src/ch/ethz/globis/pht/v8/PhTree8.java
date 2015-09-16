@@ -58,6 +58,8 @@ import ch.ethz.globis.pht.util.StringBuilderLn;
  * Linearization: Storing Hypercube as paired array of index<->non_null_reference 
  *
  * @author ztilmann (Tilmann Zaeschke)
+ * 
+ * @param <T> The value type of the tree 
  *
  */
 public class PhTree8<T> implements PhTree<T> {
@@ -118,7 +120,7 @@ public class PhTree8<T> implements PhTree<T> {
         this.root = newRoot;
     }
 
-	public PhTree8(int dim, int depth) {
+	public PhTree8(int dim) {
 		DIM = dim;
 		MIN = new long[DIM];
 		Arrays.fill(MIN, Long.MIN_VALUE);

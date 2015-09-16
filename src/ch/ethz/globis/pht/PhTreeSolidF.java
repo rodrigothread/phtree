@@ -47,7 +47,7 @@ public class PhTreeSolidF<T> implements Iterable<T> {
 	 * @param dim number of dimensions
 	 */
 	private PhTreeSolidF(int dim) {
-		this(PhTree.create(dim*2, 64));
+		this(PhTree.create(dim*2));
 	}
 	
 	/**

@@ -76,10 +76,10 @@ import ch.ethz.globis.pht.util.StringBuilderLn;
  */
 public abstract class PhTreeNV {
 
-    public static PhTreeNV create(int dim, int depth) {
+    public static PhTreeNV create(int dim) {
     	//return new PhTree1(dim, depth);
     	//return new PhTree2_CB(dim, depth);
-    	return new PhTreeVProxy(dim, depth);
+    	return new PhTreeVProxy(dim);
     }
     
     public PhTreeNV() {

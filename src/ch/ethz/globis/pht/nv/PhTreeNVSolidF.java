@@ -39,7 +39,7 @@ public class PhTreeNVSolidF implements Iterable<PhTreeNVSolidF.PHREntry> {
 	 * @param dim number of dimensions
 	 */
 	public PhTreeNVSolidF(int dim) {
-		this(PhTreeNV.create(dim*2, 64));
+		this(PhTreeNV.create(dim*2));
 	}
 	
 	/**

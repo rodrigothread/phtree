@@ -7,12 +7,12 @@ public class TestUtilInMemory implements TestUtilAPI {
 
 	@Override
 	public PhTreeNV newTree(int dim, int depth) {
-		return PhTreeNV.create(dim, depth);
+		return PhTreeNV.create(dim);
 	}
 
 	@Override
 	public <T> PhTree<T> newTreeV(int dim, int depth) {
-		return PhTree.create(dim, depth);
+		return PhTree.create(dim);
 	}
 
 	@Override

@@ -1475,10 +1475,14 @@ class Node<T> {
 		return (e != null) && (e.getKey() != null);
 	}
 
-	/**
-	 * Adjust the infix in cases were the parent node is removed.
-	 * @param infix
-	 */
+	  /**
+	   * Adjust the infix in cases were the parent node is removed.
+	   * @param prefix 
+	   * @param infixLenOfParent 
+	   * @param postLenOfParent 
+	   * @param hcPos 
+	   * @param infix
+	   */
 	public void adjustInfix(long[] prefix, int infixLenOfParent, int postLenOfParent, long hcPos) {
         applyHcPos(hcPos, postLenOfParent, prefix);
         getInfixNoOverwrite(prefix);

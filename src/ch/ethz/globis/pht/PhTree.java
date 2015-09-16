@@ -121,19 +121,10 @@ public interface PhTree<T> {
 	 * Create a new tree with the specified number of dimensions.
 	 * 
 	 * @param dim number of dimensions
+	 * @return PhTree
 	 */
     public static <T> PhTree<T> create(int dim) {
-    	return new PhTree8<T>(dim, 64);
-    }
-
-	/**
-	 * Create a new tree with the specified number of dimensions.
-	 * 
-	 * @param dim number of dimensions
-	 * @param depth the number of bits per dimension (1..64)
-	 */
-    public static <T> PhTree<T> create(int dim, int depth) {
-    	return new PhTree8<T>(dim, depth);
+    	return new PhTree8<T>(dim);
     }
 
     public static interface PhIterator<T> extends PhIteratorBase<long[], T, PhEntry<T>> {}
