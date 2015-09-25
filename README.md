@@ -10,7 +10,7 @@ Tilmann Zäschke, Christoph Zimmerli and Moira C. Norrie,
 Proceedings of Intl. Conf. on Management of Data (SIGMOD), 2014
 
 Contact:
-{zaeschke,zimmerli,norrie)@inf.ethz.ch
+Tilmann Zaeschke: zaeschke(AT)inf.ethz.ch or zoodb@gmx.de 
 
 
 # Main Properties
